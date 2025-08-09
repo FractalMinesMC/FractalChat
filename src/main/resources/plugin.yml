@@ -1,12 +1,12 @@
 name: LPC
 version: '${version}'
-main: de.ayont.lpc.LPC
+main: org.FractalMines.
 api-version: '1.21'
-authors: [Ayont, Varilx-Development]
+authors: [IcanLevitate, LPC Development]
 depend: [LuckPerms]
 softdepend: [PlaceholderAPI]
-description: Edit version of wikmors Legacy LPC plugin (Minimessage Support 1.21.5)
-website: https://modrinth.com/plugin/lpc-chat
+description: Edited version of LPC with MiniMessage and Item placeholder Supports.
+website: https://fractalmines.com
 commands:
   lpc:
     description: Reload the configuration.
