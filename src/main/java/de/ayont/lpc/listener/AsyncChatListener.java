@@ -39,9 +39,12 @@ public class AsyncChatListener implements Listener {
             event.renderer(lpcChatRenderer);
             return;
         }
-
-        event.renderer((source, sourceDisplayName, message, viewer) -> lpcChatRenderer.render(source, sourceDisplayName, message, viewer)
-                .replaceText(TextReplacementConfig.builder().match(compile("\\[item]", CASE_INSENSITIVE))
-                        .replacement(displayName.hoverEvent(item)).build()));
+event.renderer((source, sourceDisplayName, message, viewer) -> 
+    lpcChatRenderer.render(source, sourceDisplayName, message, viewer)
+        .replaceText(TextReplacementConfig.builder()
+            .match(compile("\\[(?:item|i)]", CASE_INSENSITIVE))
+            .replacement(displayName.hoverEvent(item))
+            .build())
+);
     }
 }
